@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form of CodeAlpha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='surveyform.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='surveyform.css') }}">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="heading">
+        <h1 id="head">SURVEY FORM OF CODEALPHA</h1>
+        <h1 id="subheading">Thank you for taking the time to help us improve the platform</h1>
+    </div>
+    <form action="/" method="POST">
+        <div id="content1"> 
+            <label>F/Name:</label><br><br>
+            <input type="text" name="Fname" placeholder="Enter your First name" class="box"><br><br>
+            <label>L/Name:</label><br><br>
+            <input type="text" name="Lname" placeholder="Enter your last name" class="box"><br><br>
+            <label>Email:</label><br><br>
+            <input type="email" name="Email" placeholder="Enter your Email" class="box"><br><br>
+            <label>Age (optional):</label><br><br>
+            <input type="text" name="Age" placeholder="Enter your Age" class="box"><br><br>
+
+            <label>Gender:</label><br><br>
+            <div class="option1">
+                <input type="radio" name="gender" value="Male">&nbsp;Male
+                <input type="radio" name="gender" value="Female">&nbsp;Female
+                <input type="radio" name="gender" value="Other">&nbsp;Other
+            </div>
+            
+            <br><label>Which option best describes your current role?</label><br><br>
+            <div class="option1">
+                <select name="role">
+                    <option value="Select your Role">Select your Role</option>
+                    <option value="Student">Student</option>
+                    <option value="Full Time Job">Full Time Job</option>
+                    <option value="Full Time Learner">Full Time Learner</option>
+                    <option value="Prefer Not to Say">Prefer Not to Say</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+ 
+            <br><label>What is your favorite feature in CodeAlpha?</label><br><br>
+            <div class="option1">
+                <select name="favorite_feature">
+                    <option value="Select an option">Select an option</option>
+                    <option value="Challenged">Challenged</option>
+                    <option value="Projects">Projects</option>
+                    <option value="Community">Community</option>
+                    <option value="Open Source">Open Source</option>
+                </select>
+            </div>  
+            
+            <br><label>Would you recommend this form to a friend?</label><br>
+            <div class="option1">
+                <input type="radio" name="recommendation" value="Yes">&nbsp;Yes<br><br>
+                <input type="radio" name="recommendation" value="No">&nbsp;No<br><br>
+                <input type="radio" name="recommendation" value="Maybe">&nbsp;Maybe<br><br>
+                <input type="radio" name="recommendation" value="Not Sure">&nbsp;Not Sure<br><br>
+            </div>
+            
+            <div class="g-recaptcha" data-sitekey="6LfVIrwnAAAAAJPFv4isuWM0fnacRh_tCjt9d6XX"></div>
+ 
+            <button type="submit"><h3>Submit</h3></button>
+        </div>
+    </form>
+</body>
+</html>
